@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,11 +21,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cul-pp-MKB">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="yCl-Tn-SEK">
-                            <connections>
-                                <segue destination="5jd-oI-cUV" kind="show" id="4JV-N8-B2h"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="2" id="yCl-Tn-SEK">
+                                <connections>
+                                    <segue destination="5jd-oI-cUV" kind="show" id="4JV-N8-B2h"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="3" id="i5o-3c-4Pz">
+                                <connections>
+                                    <segue destination="h0v-JK-gZy" kind="show" id="U6I-A8-hyb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,6 +69,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpO-g8-wiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1810" y="354"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g4U-7y-ZQ5">
+            <objects>
+                <viewController id="h0v-JK-gZy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eo0-4r-8L8"/>
+                        <viewControllerLayoutGuide type="bottom" id="F8n-G7-d1h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bGI-o3-AQt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrO-hC-Aa7">
+                                <rect key="frame" x="20" y="74" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CrO-hC-Aa7" firstAttribute="leading" secondItem="bGI-o3-AQt" secondAttribute="leadingMargin" id="ACh-fa-6jJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CrO-hC-Aa7" secondAttribute="trailing" id="Id6-4d-JPA"/>
+                            <constraint firstItem="CrO-hC-Aa7" firstAttribute="top" secondItem="eo0-4r-8L8" secondAttribute="bottom" constant="10" id="asV-Sa-AXv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5Q-Km-frF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="1033"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W9a-he-S7C">
